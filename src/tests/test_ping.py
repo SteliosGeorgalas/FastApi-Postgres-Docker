@@ -1,4 +1,4 @@
-def test_ping(test_app):
-    response = test_app.get("/ping")
+def test(test_app):
+    response = test_app.get("/test")
     assert response.status_code == 200
-    assert response.json() == {"ping": "pong!"}
+    assert response.json() == {"test": "success!"}
